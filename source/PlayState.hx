@@ -169,6 +169,8 @@ class PlayState extends MusicBeatState
 	var upperBoppers:FlxSprite;
 	var bottomBoppers:FlxSprite;
 	var santa:FlxSprite;
+	var ashura:FlxSprite;
+	var ashuramad:FlxSprite;
 
 	var fc:Bool = true;
 
@@ -3483,6 +3485,40 @@ class PlayState extends MusicBeatState
 	{
 		super.beatHit();
 
+		if (curSong == 'Showdown')
+			{
+				switch (curBeat)
+				{   
+					case 187:
+						remove(dad);
+					    dad = new Character(100, 100, 'ashuramad');
+						add(dad);
+					case 220:
+						remove(dad);
+					    dad = new Character(100, 100, 'ashuramad');
+						add(dad);
+					case 221:
+						remove(dad);
+						dad = new Character(100, 100, 'gun');
+						add(dad);
+					case 222:
+						remove(dad);
+						dad = new Character(100, 100, 'ashuramad');
+						add(dad);
+					case 223:
+						remove(dad);
+						dad = new Character(100, 100, 'ashuramad');
+						add(dad);
+					case 224:
+						remove(dad);
+						dad = new Character(100, 100, 'ashuramad');
+						add(dad);
+					case 224:
+					    remove(boyfriend);
+						add(boyfriend);
+				    		  
+			}
+			}
 		if (generatedMusic)
 		{
 			notes.sort(FlxSort.byY, (FlxG.save.data.downscroll ? FlxSort.ASCENDING : FlxSort.DESCENDING));
